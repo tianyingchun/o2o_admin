@@ -1,0 +1,5 @@
+{
+	"name":"default",
+	"assets": ["images/","assets/"],
+	"output": "live"
+}

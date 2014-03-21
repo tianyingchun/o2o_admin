@@ -7,9 +7,9 @@ deploypath="../deploy/"
 # -t deploy target directory, -d cutomized deploy module.
 # 
 # build style components.
-node tools/deploy-project.js -t ${deploypath} -d "../static"
+node tools/deploy-project.js -t ${deploypath} -d "../themes/default"
 # build another style components.
-node tools/deploy-project.js -t ${deploypath} -d "../static2"
+# node tools/deploy-project.js -t ${deploypath} -d "../static2"
 # third one.
-node tools/deploy-project.js -t ${deploypath} -d "../external"
+# node tools/deploy-project.js -t ${deploypath} -d "../external"
 # third one.
