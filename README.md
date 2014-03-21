@@ -1,0 +1,1 @@
+## New project structure for o2o managerment system
