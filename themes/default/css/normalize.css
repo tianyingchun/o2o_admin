@@ -1,0 +1,1 @@
+*,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}#wrapper{background-color:#fff}.center{width:960px;margin:auto}.container{max-width:100%;padding-left:25px;padding-right:25px}.clearfix:before,.clearfix:after{content:" ";display:table}
