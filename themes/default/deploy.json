@@ -1,5 +1,5 @@
 {
 	"name":"themes/default",
-	"assets": ["images/","assets/"],
+	"assets": ["fonts/", "images/","assets/"],
 	"output": "live"
 }
