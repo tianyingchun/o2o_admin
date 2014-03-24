@@ -6,29 +6,118 @@
     <script type="text/javascript" src="../seajs/enyo.js"></script>
     <script type="text/javascript" src="../themes/default/package.js"></script>
 </head>
-http://kopyov.com/themes/itsbrain/liquid/light/navs.html
+
 <body>
-    <div id="switcher">
-        <div class="center">
-            <div class="logo"></div>
+    <div class="mainwrapper" style="background-position: 0px 0px;">
+        <div class="leftpanel" style="margin-left: 0px;">
+
+            <div class="logopanel animate0 fadeInUp">
+                <h1><a href="dashboard.html">Merchant <span>BMS</span></a>
+                </h1>
+            </div>
+            <!--logopanel-->
+
+            <div class="datewidget animate1 fadeInUp">Today is Tuesday, Dec 25, 2012 5:30pm</div>
+
+            <!--plainwidget-->
+
+            <div class="leftmenu">
+                <ul class="nav nav-tabs nav-stacked">
+                    <li class="nav-header animate4 fadeInUp">Main Navigation</li>
+                    <li class="active animate5 fadeInUp">
+                        <a href="dashboard.html">
+                            <span class="icon-align-justify"></span>Dashboard</a>
+                    </li>
+                    <li class="animate6 fadeInUp">
+                        <a href="media.html">
+                            <span class="icon-picture"></span>Media</a>
+                    </li>
+                    <li class="dropdown animate8 fadeInUp">
+                        <a href="">
+                            <span class="icon-th-list"></span>Tables</a>
+                        <ul>
+                            <li><a href="table-static.html">Static Table</a>
+                            </li>
+                            <li><a href="table-dynamic.html">Dynamic Table</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!--leftmenu-->
+
         </div>
-    </div>
-    <div id="wrapper">
-        <div class="top-bar">
-            <div class="container">
-				<div class="admin">
-					<ul class="admin-menu">
-						<li class="item"><a href="#">Edit profile</a></li>
-						<li class="item"><a href="#">Menu Item</a></li>
-						<li class="item divider"><a href="#">Menu Item2</a></li>
-						<li class="item"><a href="#">Menu Item3</a></li>
-					</ul>
-				</div>
+        <div class="rightpanel" style="margin-left: 260px;">
+            <div class="headerpanel animate1 fadeInUp">
+                <a href="" class="showmenu clicked"></a>
+
+                <div class="headerright">
+                    <!--dropdown-->
+                    <div class="dropdown userinfo">
+                        <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="/page.html">Hi, ThemePixels! <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="editprofile.html">
+                                    <span class="icon-edit"></span>Edit Profile</a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="icon-wrench"></span>Account Settings</a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="icon-eye-open"></span>Privacy Settings</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="index.html">
+                                    <span class="icon-off"></span>Sign Out</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--dropdown-->
+
+                </div>
+                <!--headerright-->
+
+            </div>
+            <div class="breadcrumbwidget animate2 fadeInUp">
+
+                <ul class="breadcrumb">
+                    <li><a href="dashboard.html">Home</a> 
+                        <span class="divider">/</span>
+                    </li>
+                    <li class="active">Dashboard</li>
+                </ul>
+            </div>
+            <div class="pagetitle animate3 fadeInUp">
+                <h1>Dashboard</h1>
+                <span>This is a sample description for dashboard page...</span>
+            </div>
+            <div class="maincontent animate4 fadeInUp">
+                <div class="contentinner content-dashboard">
+                    <div class="alert alert-info">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        <strong>Welcome!</strong>This alert needs your attention, but it's not super important.
+                    </div>
+                    <div class="row-fluid">
+
+
+
+                    </div>
+                </div>
             </div>
         </div>
-        <div id="body"></div>
+
+        <!-- END OF RIGHT PANEL -->
+        <div class="clearfix"></div>
+        <div class="footer">
+            <div class="footerleft" style="display: block;">Katniss Premium Admin Template v1.0</div>
+            <div class="footerright" style="margin-left: 260px;">© ThemePixels - <a href="http://twitter.com/themepixels">Follow me on Twitter</a> - <a href="http://dribbble.com/themepixels">Follow me on Dribbble</a>
+            </div>
+        </div>
+        <!--footer-->
     </div>
-    <div id="footer"></div>
 </body>
 
 </html>

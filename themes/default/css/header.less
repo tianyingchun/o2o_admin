@@ -1,19 +1,97 @@
-#switcher {
-    height: 60px;
-    background: #1a1b1d url(../images/bg.png) repeat-x;
-    box-shadow: 0px 0px 5px #333;
-    -moz-box-shadow: 0px 0px 5px #333;
-    -webkit-box-shadow: 0px 0px 5px #333;
-    z-index: 99999;
-    // position: fixed;
-    width: 100%;
-    .logo {
-        width: 300px;
-        height:50px;
-        background:url(../images/logo.png) no-repeat;
+.logopanel {
+    background-color: #235688;
+    min-height: 50px;
+    border-right: 1px solid #023c70;
+    h1 {
+        text-transform: uppercase;
+        color: #fff;
+        padding: 5px 0 0 10px;
+        font-size: 24px;
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+        a {
+            color:#fff;
+        }
     }
 }
-.top-bar {
-    min-height: 40px;
-    background: #6f7683;
+.datewidget {
+    background: #232323;
+    font-size: 11px;
+    color: #999;
+    padding: 5px 10px;
+    border-right: 1px solid #1e1e1e;
+}
+.leftpanel {
+    width: 260px;
+    float: left;
+}
+.rightpanel {
+    margin-left: 260px;
+    position: relative;
+    background: url(../images/gray_jean.png);
+}
+.headerpanel {
+    background-color: #3b6998;
+    position: relative;
+    z-index: 100;
+}
+.headerpanel {
+    min-height: 50px;
+    border-left: 1px solid #45729e;
+}
+.showmenu {
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    display: inline-block;
+    height: 35px;
+    width: 40px;
+    background: #0b4073 url(../images/menu.png) no-repeat center center;
+    margin: 7px 0 0 8px;
+    -moz-box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2), 1px 1px 0 rgba(255, 255, 255, 0.2);
+    -webkit-box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2), 1px 1px 0 rgba(255, 255, 255, 0.2);
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2), 1px 1px 0 rgba(255, 255, 255, 0.2);
+}
+.breadcrumbwidget {
+    background: #333;
+    min-height: 31px;
+    border-left: 1px solid #3c3c3c;
+    font-size: 11px;
+    position: relative;
+}
+.breadcrumb {
+    border: 1px solid #bbb;
+    font-size: 11px;
+    padding: 5px 15px;
+}
+.breadcrumbwidget .breadcrumb {
+    background: none !important;
+    margin: 0;
+    border: 0;
+    padding: 5px 10px;
+}
+.breadcrumb>li {
+    display: inline-block;
+    text-shadow: 0 1px 0 #fff;
+}
+.breadcrumbwidget .breadcrumb li {
+    text-shadow: none;
+}
+.breadcrumb>li {
+    display: inline-block;
+    text-shadow: 0 1px 0 #fff;
+}
+.breadcrumbwidget .breadcrumb li.active {
+    color: #ccc;
+}
+.breadcrumb li.active {
+    color: #666;
+}
+.breadcrumbwidget .breadcrumb li {
+    text-shadow: none;
+}
+.breadcrumb>.active {
+    color: #999;
+}
+.breadcrumb .divider {
+    margin: 0 4px;
 }

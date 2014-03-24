@@ -5,5 +5,6 @@ enyo.depends(
 	"animate.css",
 	"normalize.css",
 	"header.css",
-	"loginpage.css"
+	"loginpage.css",
+	"leftmenu.css"
 );
