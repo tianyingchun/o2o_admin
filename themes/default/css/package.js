@@ -1,10 +1,6 @@
 enyo.depends(
-	"reset.css",
-	"font-awesome.css",
-	"icons.css",
-	"animate.css",
-	"normalize.css",
-	"header.css",
-	"loginpage.css",
-	"leftmenu.css"
+	"base/",
+	"components/",
+	"layout/",
+	"modules/"
 );
