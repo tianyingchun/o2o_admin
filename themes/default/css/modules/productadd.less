@@ -104,6 +104,7 @@
 .stdform span.field, .stdform div.field {
     margin-left: 220px;
     display: block;
+    overflow: hidden;
     position: relative;
 }
 h4.widgettitle {
@@ -143,6 +144,42 @@ h4.widgettitle {
         border:none;
     }
 }
-.stdform2 input[type='file']{
+.stdform2 input[type='file'] {
     margin: 5px 0;
+}
+.stdform2 .preview {
+    position: relative;
+    .delete {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        display:none;
+        background: rgba(0, 0, 0, 0.4);
+        left: 2px;
+        top: 2px;
+        text-align: center;
+        line-height: 80px;
+        cursor: pointer;
+        background-image: url(../../images/delete.png);
+        background-repeat: no-repeat;
+        background-position:90% 10%;
+    }
+    span.item {
+        width: 80px;
+        height: 80px;
+        box-sizing: content-box;
+        overflow: hidden;
+        position: relative;
+        display: block;
+        float: left;
+        padding: 2px;
+        margin: 2px 4px;
+        border:1px solid #ccc;
+    }
+    img {
+        width: 80px;
+        height: 80px;
+        border: 0;
+        float:left;
+    }
 }
