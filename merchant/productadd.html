@@ -1,0 +1,207 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>商户后台管理系统</title>
+    <!--<link rel="stylesheet" type="text/css" href="../deploy/themes/default/live.css">-->
+    <script type="text/javascript" src="../seajs/enyo.js"></script>
+    <script type="text/javascript" src="../themes/default/package.js"></script>
+    <script type="text/javascript" src="../deploy/sea-modules/seajs/seajs/2.1.1/sea.js"></script>
+</head>
+
+<body>
+    <div class="mainwrapper" style="background-position: 0px 0px;">
+        <div class="leftpanel" style="margin-left: 0px;">
+
+            <div class="logopanel">
+                <h1><a href="dashboard.html">商户后台管理系统</a>
+                </h1>
+            </div>
+            <!--logopanel-->
+            <div class="datewidget">Today is Tuesday, Dec 25, 2012 5:30pm</div>
+            <!--plainwidget-->
+
+            <div class="leftmenu">
+                <ul class="nav nav-tabs nav-stacked">
+                    <li class="nav-header">导航菜单</li>
+                    <li>
+                        <a href="staffs.html">
+                            <span class="icon-user"></span>员工管理</a>
+                    </li>
+                    <li class="dropdown active">
+                        <a href="products.html">
+                            <span class="icon-th-list"></span>产品管理</a>
+                        <ul>
+                            <li><a class="active" href="productadd.html">添加产品</a>
+                            </li>
+                            <li><a href="products.html?published=1">已发布的产品</a>
+                            </li>
+                            <li><a href="products.html?deleted=1">已删除的产品</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="orderlist.html">
+                            <span class="icon-shopping-cart"></span>订单管理</a>
+                    </li>
+                    <li class="nav-bottom"></li>
+                </ul>
+            </div>
+            <!--leftmenu-->
+
+        </div>
+        <div class="rightpanel" style="margin-left: 260px;">
+            <div class="headerpanel">
+                <a href="" class="showmenu clicked"></a>
+
+                <div class="headerright">
+                    <!--dropdown-->
+                    <div class="dropdown userinfo">
+                        <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="#">Hi, administrator! <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">
+                                    <span class="icon-edit"></span>Edit Profile</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon-wrench"></span>Account Settings</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon-off"></span>Sign Out</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--dropdown-->
+
+                </div>
+                <!--headerright-->
+
+            </div>
+            <div class="breadcrumbwidget">
+
+                <ul class="breadcrumb">
+                    <li><a href="dashboard.html">首页</a> 
+                        <span class="divider">/</span>
+                    </li>
+                    <li><a href="dashboard.html">产品管理</a> 
+                        <span class="divider">/</span>
+                    </li>
+                    <li class="active">添加产品</li>
+                </ul>
+            </div>
+            <div class="pagetitle">
+                <h1>添加产品</h1>
+                <span>添加新的产品数据</span>
+            </div>
+            <div class="maincontent">
+                <div class="contentinner content-dashboard">
+                    <div class="row-fluid">
+                        <h4 class="widgettitle nomargin shadowed">新产品信息录入表</h4>
+                        <div class="widgetcontent bordered shadowed nopadding">
+                            <form class="stdform stdform2" method="post">
+                                <p>
+                                    <label>产品名称</label>
+                                    <span class="field">
+                                        <input type="text" placeholder="请输入产品名称" name="productname" id="productname" class="input-xxlarge">
+                                    </span>
+                                </p>
+
+                                <p>
+                                    <label>原价</label>
+                                    <span class="field">
+                                        <input type="number" placeholder="请输入产品原价" name="oldprice" id="oldprice" />&nbsp;(RMB)
+                                    </span>
+                                </p>
+                                <p>
+                                    <label>促销价</label>
+                                    <span class="field">
+                                        <input type="number" placeholder="请输入产品促销价" name="price" id="price" />&nbsp;(RMB)
+                                    </span>
+                                </p>
+                                <p>
+                                    <label>产品描述
+                                    </label>
+                                    <span class="field">
+                                        <textarea cols="80" placeholder="请输入产品描述" rows="5" name="productdesc" id="productdesc" class="span5"></textarea>
+                                    </span>
+                                </p>
+                                <p>
+                                    <label>库存</label>
+                                    <span class="field">
+                                        <input type="number" name="stock" id="stock">
+                                    </span>
+                                </p>
+                                <p>
+                                    <label>是否发布</label>
+                                    <span class="field">
+                                        <input type="checkbox" name="published" id="published">
+                                    </span>
+                                </p>
+                                <p>
+                                    <label>产品图片</label>
+                                    <span class="field">
+                                        <a href="#" class="btn" id="add_new_picture">
+                                            <span class="icon-plus"></span>Add</a>
+                                        <br />
+                                        <input type="file" name="picture1" id="picture1">
+                                        <br />
+                                    </span>
+                                </p>
+                                <p class="stdformbutton">
+                                    <input type="submit" class="btn btn-primary" value="添加" />
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- END OF RIGHT PANEL -->
+        <div class="clearfix"></div>
+        <div class="footer">
+            <div class="footerleft" style="display: block;">商户后台管理系统 V1.0</div>
+            <div class="footerright" style="margin-left: 260px;">© 1qianbao - <a href="http://www.1qianbao.com/">1qianbao.com</a>
+            </div>
+        </div>
+        <!--footer-->
+    </div>
+</body>
+<script type="text/javascript">
+seajs.config({
+    base: "../deploy/sea-modules/",
+    // debug: true,
+    // 路径配置用来跨目录调用.
+    paths: {
+        // "jquery": "http://live/root/path",
+    },
+    // / 文件编码
+    charset: 'utf-8',
+    // 别名配置,注意别名的 VALUE 只能为sea-module define 的ID 如下 jquery,只能与sea-modules/ 下面的路径
+    // define("jquery/jquery/1.10.1/jquery", [], function () { return jQuery; } );保持一致.
+    alias: {
+        // "seajs-debug": "seajs/seajs-debug/1.1.1/seajs-debug",
+        "jquery": "jquery/jquery/1.10.1/jquery", //=={jquery=paths.jquery}/jquery/1.10.1/jquery
+        "jquery-debug": "jquery/jquery/1.10.1/jquery-debug"
+    }
+});
+seajs.use("jquery", function($) {
+    var pictureid = 2;
+    $(function() {
+        $("#add_new_picture").on("click", function(e) {
+            var $this = $(this);
+            var fileHtml = '<input type="file" name="{picture}" id="{picture}"><br />';
+            fileHtml = fileHtml.replace(/{picture}/g, "picture" + pictureid);
+            var $newFile = $(fileHtml);
+            $this.parent().append($newFile);
+            pictureid++;
+            return false;
+        });
+    });
+})
+</script>
+
+</html>

@@ -67,7 +67,9 @@
     text-transform: uppercase;
 }
 .headerright {
-    float: right;
+    right: 0;
+    top: 0;
+    position: absolute;
     padding: 7px 10px 0 0;
 }
 .dropup, .dropdown {
@@ -79,6 +81,12 @@
 }
 .leftmenu .nav-tabs.nav-stacked > li.active > a {
     background: #f7f7f7 url(../../images/gray_jean.png);
+}
+.leftmenu .nav-tabs.nav-stacked > .dropdown.active > a {
+    background: transparent url(../../images/arrowdown.png) no-repeat right center !important;
+}
+.leftmenu .nav-tabs.nav-stacked > .dropdown.active ul {
+    display:block;
 }
 .nav-tabs.nav-stacked > li.active > a {
     background: #fff;
@@ -149,7 +157,11 @@
 .leftmenu .nav-tabs.nav-stacked > li > a:hover {
     background: #eee;
 }
-.leftmenu .nav-tabs li.nav-bottom{
+.leftmenu .nav-tabs li.nav-bottom {
     height: 36px;
     background:#eee;
+}
+.leftmenu .nav-tabs ul li a.active {
+    font-weight: bold;
+    color: black;
 }
