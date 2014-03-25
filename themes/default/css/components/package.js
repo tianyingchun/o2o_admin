@@ -1,5 +1,6 @@
 enyo.depends(
 	"animate.css",
 	"icons.css",
-	"buttons.css"
+	"buttons.css",
+	"alert.css"
 );

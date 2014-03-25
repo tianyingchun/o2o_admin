@@ -77,3 +77,41 @@
     background: linear-gradient(to bottom, #4e86b7 0%, #035f9a 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4e86b7', endColorstr='#035f9a', GradientType=0);
 }
+/***************************************
+ close button
+/****************************************/
+button.close {
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+}
+.close {
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 20px;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .2;
+    filter: alpha(opacity=20);
+}
+.alert .close {
+    top: 0;
+    right: -23px;
+    color: #937f0e;
+}
+.alert .close {
+    position: relative;
+    top: -2px;
+    right: -21px;
+    line-height: 20px;
+}
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: .4;
+    filter: alpha(opacity=40);
+}

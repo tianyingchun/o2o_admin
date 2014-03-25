@@ -1,5 +1,5 @@
 .leftmenu {
-    margin: 10px 0;
+    margin: 0 0;
 }
 .nav-tabs:before, .nav-pills:before, .nav-tabs:after, .nav-pills:after {
     display: table;
@@ -17,8 +17,9 @@
 .leftmenu .nav-tabs li {
     border-bottom: 1px solid #bbb;
     margin: 0 1px 0 0;
-    height: 36px;
-    line-height: 36px;
+    // height: 37px;
+    overflow: hidden;
+    // line-height: 36px;
     background: rgb(237, 237, 237);
     background: -moz-linear-gradient(top, rgba(237, 237, 237, 1) 0%, rgba(222, 222, 222, 1) 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(237, 237, 237, 1)), color-stop(100%, rgba(222, 222, 222, 1)));
@@ -39,6 +40,9 @@
 .leftmenu .nav-tabs li:first-child {
     border-top: 1px solid #bbb;
 }
+.leftmenu .nav-tabs ul li:last-child {
+    border-bottom: 0;
+}
 .leftmenu .nav-tabs > .active {
     margin-right: 0;
     font-weight: bold;
@@ -51,12 +55,13 @@
     float: none;
 }
 .nav-header {
+    box-sizing: content-box;
+    height: 36px;
+    line-height: 36px;
     display: block;
-    padding: 3px 15px;
-    font-size: 11px;
-    height: auto !important;
+    padding: 5px 15px;
+    font-size: 16px;
     font-weight: bold;
-    line-height: 20px !important;
     color: #999;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
     text-transform: uppercase;
@@ -71,9 +76,6 @@
 .headerright .dropdown {
     display: inline-block;
     margin-left: 7px;
-}
-.leftmenu .nav-tabs li:first-child {
-    border-top: 1px solid #bbb;
 }
 .leftmenu .nav-tabs.nav-stacked > li.active > a {
     background: #f7f7f7 url(../../images/gray_jean.png);
@@ -91,18 +93,63 @@
     -moz-border-radius: 4px 4px 0 0;
     border-radius: 4px 4px 0 0;
 }
+.leftmenu .nav-tabs > .active > a span {
+    opacity: 0.8;
+}
 .nav-tabs.nav-stacked > li > a {
     border-color: #ccc;
+}
+.leftmenu .nav-tabs > .dropdown > a {
+    background-image: url(../../images/arrowdown.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+.leftmenu .nav-tabs > .dropdown > a:hover {
+    background: #eee url(../../images/arrowdown.png) no-repeat right center !important;
 }
 .leftmenu .nav-tabs li a span {
     display: inline-block;
     vertical-align: top;
-    margin: 11px 5px 0 15px;
+    margin: 2px 5px 0 15px;
     opacity: 0.6;
 }
 .leftmenu .nav-tabs li a {
     border: 0;
+    display:block;
     color: #666;
     font-weight: normal;
     text-shadow: 1px 1px rgba(255, 255, 255, 0.3);
+}
+.leftmenu .nav-tabs ul {
+    list-style: none;
+    background: #d3d3d3;
+    display: none;
+    -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.leftmenu .nav-tabs ul li {
+    margin-right: 0;
+    background: none;
+}
+.leftmenu a {
+    text-decoration: none;
+}
+.leftmenu .nav-tabs ul li a {
+    border: 0;
+    color: #666;
+    text-shadow: 1px 1px rgba(255, 255, 255, 0.3);
+    padding: 5px 10px;
+    display: block;
+    padding-left: 33px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.leftmenu .nav-tabs.nav-stacked > li > a:hover {
+    background: #eee;
+}
+.leftmenu .nav-tabs li.nav-bottom{
+    height: 36px;
+    background:#eee;
 }
