@@ -3,5 +3,5 @@ enyo.depends(
 	"leftmenu.css",
 	"maincontent.css",
 	"loginpage.css",
-	"productadd.css"
+	"product.css"
 );

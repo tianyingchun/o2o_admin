@@ -1,4 +1,33 @@
 .searchwidget {
     padding: 10px;
     border-bottom: 1px solid #bbb;
+    .btn {
+        padding: 7px 12px;
+        border-color: #bbb;
+        box-sizing: content-box;
+        height: 20px;
+        &:last-child {
+            -moz-border-radius: 0 2px 2px 0;
+            -webkit-border-radius: 0 2px 2px 0;
+            border-radius: 0 2px 2px 0;
+            border-color: #bbb;
+            font-size: 12px;
+        }
+    }
+    select {
+    	height: 30px;
+    	box-sizing: content-box;
+    }
+}
+.searchwidget input.search-query {
+    border: 1px solid #bbb;
+    outline: none;
+    padding: 7px 10px;
+    width: 178px;
+    height: 20px;
+    line-height: 20px;
+    box-sizing: content-box;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
 }
