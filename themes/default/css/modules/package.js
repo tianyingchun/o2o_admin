@@ -3,5 +3,6 @@ enyo.depends(
 	"leftmenu.css",
 	"maincontent.css",
 	"loginpage.css",
-	"product.css"
+	"product.css",
+	"error.css"
 );
