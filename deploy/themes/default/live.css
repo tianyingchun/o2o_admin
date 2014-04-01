@@ -54,4 +54,4 @@ a,abbr,acronym,address,applet,b,big,blockquote,body,caption,center,cite,code,del
 div.figure{margin:40px auto 0;padding:0;width:400px;height:353px;background:url(images/psychobox.png) no-repeat center center}#errorbox{line-height:1.6em;margin:0 auto;max-width:600px;padding:0 20px;text-align:left}
 
 /* ../themes/default/css/modules/accountdetail.css */
-.account-detail label{width:80px;text-align:right}
+.account-detail p label{width:80px;text-align:right;padding:10px 0}
