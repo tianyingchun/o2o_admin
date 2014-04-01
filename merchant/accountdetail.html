@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>后台管理系统 - 商户账户信息预览</title>
+
+    <meta charset="UTF-8" />
+    <!--<link rel="stylesheet" type="text/css" href="../deploy/themes/default/live.css">-->
+    <script type="text/javascript" src="../seajs/enyo.js"></script>
+    <script type="text/javascript" src="../themes/default/package.js"></script>
+
+    <script type="text/javascript" src="/deploy/sea-modules/seajs/seajs/2.1.1/sea.js"></script>
+    <script>
+    /*<![CDATA[*/
+    seajs.config({
+        base: '/o2o_admin/deploy/sea-modules/',
+        // debug: true,
+        // 路径配置用来跨目录调用.
+        paths: {
+            // "jquery": "http://live/root/path",
+        },
+        // / 文件编码
+        charset: 'utf-8',
+        // 别名配置,注意别名的 VALUE 只能为sea-module define 的ID 如下 jquery,只能与sea-modules/ 下面的路径
+        // define("jquery/jquery/1.10.1/jquery", [], function () { return jQuery; } );保持一致.
+        alias: {
+            // "seajs-debug": "seajs/seajs-debug/1.1.1/seajs-debug",
+            "jquery": "jquery/jquery/1.10.1/jquery", //=={jquery=paths.jquery}/jquery/1.10.1/jquery
+            "jquery-debug": "jquery/jquery/1.10.1/jquery-debug"
+        }
+    });
+    /*]]>*/
+    </script>
+
+
+</head>
+
+<body>
+    <div class="mainwrapper" style="background-position: 0px 0px;">
+        <div class="leftpanel">
+            <div class="logopanel">
+                <h1>
+                    <a href="dashboard.html">商户后台管理系统</a>
+                </h1>
+            </div>
+            <div class="datewidget">2014-04-01 13:09:33</div>
+            <div class="left-menu-holder">
+
+                <div class="leftmenu">
+
+                    <ul class="nav nav-tabs nav-stacked">
+                        <li class="nav-header">导航菜单</li>
+                        <li class="active">
+                            <a href="/o2o_admin/merchant/account/detail">
+                                <span class="icon-user"></span>商户信息
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="item" href="/o2o_admin/merchant/index">
+                                <span class="icon-th-list"></span>产品管理
+                            </a>
+                            <ul>
+                                <li><a href="/o2o_admin/merchant/create">添加产品</a>
+                                </li>
+                                <li><a href="/o2o_admin/merchant/publishedproducts">已发布的产品</a>
+                                </li>
+                                <li><a href="/o2o_admin/merchant/deletedproducts">已删除的产品</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/o2o_admin/merchant/orderlist">
+                                <span class="icon-shopping-cart"></span>订单管理
+                            </a>
+                        </li>
+                        <li class="nav-bottom"></li>
+                    </ul>
+
+
+                </div>
+                <script>
+                seajs.use("jquery", function($) {
+                    $(function() {
+                        $(".leftmenu li.dropdown a.item").on("click", function(e) {
+                            var $this = $(this).next("ul");
+                            if ($this.hasClass("hide")) {
+                                $this.slideDown("fast", function() {
+                                    $this.removeClass("hide");
+                                });
+                            } else {
+                                $this.slideUp("fast", function() {
+                                    $this.addClass("hide");
+                                });
+                            }
+                            e.preventDefault();
+                        });
+                    });
+                });
+                </script>
+
+            </div>
+        </div>
+        <div class="rightpanel" style="margin-left: 260px;">
+            <div class="headerpanel">
+                <a href="" id="showmenu" class="showmenu clicked"></a>
+                <div class="headerright">
+
+                    <!--dropdown-->
+                    <div class="dropdown userinfo">
+                        <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="#">Hi, administrator! <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">
+                                    <span class="icon-edit"></span>Edit Profile
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon-wrench"></span>Account Settings
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon-off"></span>Sign Out
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--dropdown-->
+
+                </div>
+            </div>
+            <!--headerright-->
+            <div>
+
+                <div class="breadcrumbwidget">
+                    <ul class="breadcrumb">
+                        <li><a href="/o2o_admin/merchant/index">首页</a> 
+                            <span class="divider">/</span>
+                        </li>
+                        <li><a href="/o2o_admin/merchant/index">商户信息</a> 
+                            <span class="divider">/</span>
+                        </li>
+                        <li class="active">商户信息</li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="pagetitle">
+                <h1>商户信息</h1>
+                <span>查看当前商户详情</span>
+            </div>
+            <div class="maincontent">
+                <div class="contentinner content-dashboard">
+                    <div class="row-fluid">
+
+                        <h4 class="widgettitle nomargin shadowed">商户详情</h4>
+                        <div class="account-detail stdform stdform2 widgetcontent bordered shadowed nopadding">
+                            <p style="border-top: 0;">
+                                <label>商户名称</label>
+                                <span class="field">
+                                    请输入商户名称
+                                </span>
+                            </p>
+
+                            <p>
+                                <label>联系地址</label>
+                                <span class="field">
+                                    <input type="text" placeholder="请输入联系地址" name="merchantAddress" id="merchantAddress" class="input-xxlarge" />
+                                </span>
+                            </p>
+                            <p>
+                                <label>Email</label>
+                                <span class="field">
+                                    <input type="email" placeholder="请输入Email" name="email" id="email" class="input-xxlarge" />
+                                </span>
+                            </p>
+                            <p>
+                                <label>商户ID</label>
+                                <span class="field">
+                                    <input type="text" placeholder="请输入申请商户返回的ID" name="merchantId" id="merchantId" class="input-xxlarge" />
+                                </span>
+                            </p>
+                            <p>
+                                <label>商户KEY</label>
+                                <span class="field">
+                                    <input type="text" placeholder="请输入申请商户返回的KEY" name="merchantKey" id="merchantKey" class="input-xxlarge" />
+                                </span>
+                            </p>
+                            <p>
+                                <label>是否发布</label>
+                                <span class="field">
+                                    <input type="checkbox" name="published" id="published" />
+                                </span>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="clearfix"></div>
+            <div class="footer">
+                <div class="footerleft" style="display: block;">商户后台管理系统 V1.0</div>
+                <div class="footerright" style="margin-left: 260px;">
+                    © 1qianbao - <a href="http://www.1qianbao.com/">1qianbao.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

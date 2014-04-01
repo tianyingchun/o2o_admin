@@ -4,5 +4,6 @@ enyo.depends(
 	"maincontent.css",
 	"loginpage.css",
 	"product.css",
-	"error.css"
+	"error.css",
+	"accountdetail.css"
 );
