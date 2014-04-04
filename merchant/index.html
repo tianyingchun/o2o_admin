@@ -1,0 +1,152 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>商户端首页</title>
+    <!--<link rel="stylesheet" type="text/css" href="../deploy/themes/default/live.css">-->
+    <script type="text/javascript" src="../seajs/enyo.js"></script>
+    <script type="text/javascript" src="../themes/default/package.js"></script>
+    <script type="text/javascript" id="seajsnode" src="../deploy/sea-modules/seajs/seajs/2.1.1/sea.js"></script>
+    <script type="text/javascript">
+    seajs.config({
+        base: "../deploy/sea-modules",
+        // debug: true,
+        // 路径配置用来跨目录调用.
+        paths: {
+            // "jquery": "http://live/root/path",
+        },
+        // / 文件编码
+        charset: 'utf-8',
+        // 别名配置,注意别名的 VALUE 只能为sea-module define 的ID 如下 jquery,只能与sea-modules/ 下面的路径
+        // define("jquery/jquery/1.10.1/jquery", [], function () { return jQuery; } );保持一致.
+        alias: {
+            // "seajs-debug": "seajs/seajs-debug/1.1.1/seajs-debug",
+            "jquery": "jquery/jquery/1.10.1/jquery", //=={jquery=paths.jquery}/jquery/1.10.1/jquery
+            "jquery-debug": "jquery/jquery/1.10.1/jquery-debug"
+        }
+    });
+    </script>
+</head>
+
+<body class="loginbody">
+    <div id="screen" style="width: 100%; height: 100%; position: fixed;z-index:0"></div>
+    <div class="wrapper" id="wrapper">
+
+        <div class="authcenter-head">
+            <div class="container fn-clear">
+                <ul class="container-right">
+                    <li class="container-right-item"><a href="https://1qianbao.com/" target="_blank" seed="alipay-homepage" title="壹钱包首页">壹钱包首页</a>
+                    </li>
+                    <li class="container-seperator"></li>
+                    <li class="container-right-item"><a href="http://dev.1qianbao.com/easyTake/admin/login.jsp" target="_blank" seed="authcenter-help" title="管理员登陆">管理员登陆</a>
+                    </li>
+                </ul>
+                <ul class="container-left">
+                    <li class="container-left-item container-left-first">
+                        <i class="iconfont" title="手机支付宝"></i>
+                        <a href="http://dev.1qianbao.com/doc/download/O2O4Merchant.apk" target="_blank" seed="authcenter-mobile">商户端手机App</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="header" coor="header">
+            <div class="header-wrap">
+                <div id="o2o-img-logo" class="fn-left">
+                    <a href="/" seed="logo" class="ui-logo-o2o">o2o商户首页</a>
+                </div>
+                <ul class="nav" coor="nav">
+                    <li class="nav-item" id="business">
+                        <a href="https://1qianbao.com/merchant" seed="Nav-bussiness" class="nav-item-link">商家服务</a>
+                    </li>
+                    <li class="nav-item" id="personal">
+                        <a href="https://1qianbao.com/" seed="Nav-personal" class="nav-item-link">壹钱包 </a>
+                    </li>
+                    <li class="nav-item " id="home">
+                        <a href="/" class="nav-item-link " seed="home-navItemLink" smartracker="on">首页</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="authcenter-body">
+            <div id="slideshow" class="slideshow">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide banner1">
+
+                    </div>
+                    <div class="swiper-slide banner2">
+
+                    </div>
+                </div>
+                <div class="carousel-indicators">
+                </div>
+            </div>
+            <div class="login-wrapper">
+                <div class="login login-modern">
+                    <div class="qrcode-target"></div>
+                    <form action="">
+                        <h2 class="ui-form-title" id="merchant-title">扫二维码下载商户App</h2>
+                        <div class="download-android-app">
+
+                        </div>
+                        <input type="submit" class="login-btn" value="商户登陆" />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="service-wrapper">
+            <div class="services">
+                <div class="service">
+                    <h2 class="title">多渠道收款</h2>
+                    <div class="body">线下、线上、移动端全方位支持</div>
+                </div>
+                <div class="service">
+                    <h2 class="title">资金快速结算</h2>
+                    <div class="body">多种收 / 付款方式 加速资金流转效率</div>
+                </div>
+                <div class="service">
+                    <h2 class="title">商户服务 增值服务</h2>
+                    <div class="body">提供全套用户、权限、安全服务</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer" class="authcenter-foot">
+        <div class="authcenter-foot-container">
+            <p class="authcenter-foot-link">
+                <a href="http://www.pingan.com/index.shtml" target="_blank">中国平安官网</a> |
+                <a href="http://www.wanlitong.com/" target="_blank">万里通</a> |
+                <a href="http://one.pingan.com/" target="_blank">一账通</a> |
+                <a href="http://www.eka.cn/" target="_blank">壹卡会</a> |
+                <a href="http://bank.pingan.com/index.shtml" target="_blank">平安银行</a> |
+                <a href="http://www.xsme.com/web/" target="_blank">平安交易所</a>
+            </p>
+            <div class="copyright">
+                壹钱包权所有 2013-2016 壹钱包版权所有 粤ICP备11100138号-5
+            </div>
+
+        </div>
+    </div>
+    <script type="text/javascript">
+    window.onload = function() {
+        var screenHeight = document.querySelector("#screen").offsetHeight;
+        var wrapperHeight = document.querySelector("#wrapper").offsetHeight;
+        var footerHeight = document.querySelector("#footer").offsetHeight;
+        // console.log(screenHeight, wrapperHeight, footerHeight)
+        if ((wrapperHeight + footerHeight) <= screenHeight) {
+            document.querySelector("#footer").classList.add("fixed");
+        }
+        document.querySelector("#screen").style.display = "none";
+    };
+    seajs.use("sea-libs/slideshow/1.0.0/slideshow", function(Swiper) {
+        var mySwiper = new Swiper('#slideshow', {
+            pagination: '.carousel-indicators',
+            // paginationClickable: false,
+            autoplay: 3000,
+            slidesPerView: 1,
+            loop: true
+        });
+    });
+    </script>
+</body>
+
+</html>
